@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html style="" class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Python Basic Syntax</title>
+<meta name="description" content="Python Basic Syntax - Learning Python in simple and easy steps : A beginner's tutorial containing complete knowledge of Python Syntax Object Oriented Language, Methods, Tuples, Tools/Utilities, Exceptions Handling, Sockets, GUI, Extentions, XML Programming.">
+<meta name="Keywords" content="Python, Tutorials, Learning, Beginners, Basics, Object Oriented Language, Methods, Overriding, Networking, Multithreading,Methods, Tuples, Tools/Utilities, Exceptions Handling, Sockets, GUI, Extentions, XML, Programming.">
+<!-- base href="https://www.tutorialspoint.com/" -->
+<link rel="shortcut icon" href="https://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="Python%20Basic%20Syntax_files/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/python/images/try-it.jpg) top right no-repeat !important}select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
+ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #fdbf00 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #fdbf00 !important;}
+.submenu-item{ border-bottom: 2px solid #fdbf00 !important; border-top: 2px solid #fdbf00 !important }
+.ace_scroller{overflow: auto!important;}
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="Python%20Basic%20Syntax_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="https://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="Python%20Basic%20Syntax_files/logo.png">
+      </a>
+      </h1>			
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a href="https://www.tutorialspoint.com/about/about_careers.htm" style="background: #fffb09; font-weight: bold;"><i class="icon icon-suitcase"></i> Jobs</a></li>
+            <li> <a href="http://www.sendfiles.net/"><i class="fa fa-send"></i> &nbsp;SENDFiles</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/whiteboard.htm"><img src="Python%20Basic%20Syntax_files/image-editor.png" alt="Whiteboard" title="Whiteboard"> &nbsp;Whiteboard</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/netmeeting.php"><i class="fa-camera"></i> &nbsp;Net Meeting</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/online_dev_tools.htm"> <i class="dev-tools-menu" style="opacity:.5"></i> Tools </a> </li>
+            <li> <a href="https://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>            
+            <li class="top-icons">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="https://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" data-placement="bottom" title="tutorialspoint YouTube">YouTube</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 24px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+  
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="https://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/videotutorials/index.htm"><i class="fa-toggle-right"></i> Videos </a></li>
+               <li class="dropdown no-sub-menu">
+                  <div class="searchform-popup">
+                     <input class="header-search-box" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off" type="text">
+                     <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+                 </div>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+         
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<style>
+ul.nav-list.primary>li a.videolink {
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #d6d6d6;
+}
+</style>
+<div class="mini-logo">
+<img src="Python%20Basic%20Syntax_files/python-mini.jpg" alt="Python Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li><a class="videolink" href="https://www.tutorialspoint.com/python_online_training/index.asp" target="_blank"><img src="Python%20Basic%20Syntax_files/python-video-tutorials.jpg" alt="Python Video Tutorials"></a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Python Basic Tutorial</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/index.htm">Python - Home</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_overview.htm">Python - Overview</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_environment.htm">Python - Environment Setup</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_basic_syntax.htm" style="background-color: rgb(214, 214, 214);">Python - Basic Syntax</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_variable_types.htm">Python - Variable Types</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_basic_operators.htm">Python - Basic Operators</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_decision_making.htm">Python - Decision Making</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_loops.htm">Python - Loops</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_numbers.htm">Python - Numbers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_strings.htm">Python - Strings</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_lists.htm">Python - Lists</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_tuples.htm">Python - Tuples</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_dictionary.htm">Python - Dictionary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_date_time.htm">Python - Date &amp; Time</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_functions.htm">Python - Functions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_modules.htm">Python - Modules</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_files_io.htm">Python - Files I/O</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_exceptions.htm">Python - Exceptions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Python Advanced Tutorial</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_classes_objects.htm">Python - Classes/Objects</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_reg_expressions.htm">Python - Reg Expressions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_cgi_programming.htm">Python - CGI Programming</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_database_access.htm">Python - Database Access</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_networking.htm">Python - Networking</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_sending_email.htm">Python - Sending Email</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_multithreading.htm">Python - Multithreading</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_xml_processing.htm">Python - XML Processing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_gui_programming.htm">Python - GUI Programming</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_further_extensions.htm">Python - Further Extensions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Python  Useful Resources</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_questions_answers.htm">Python - Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_quick_guide.htm">Python - Quick Guide</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_tools_utilities.htm">Python - Tools/Utilities</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_useful_resources.htm">Python - Useful Resources</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/python/python_discussion.htm">Python - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Python Basic Syntax</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/python/python_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/python/python_variable_types.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<p>The Python language has many similarities to Perl, C, and Java. 
+However, there are some definite differences between the languages.</p>
+<h2>First Python Program</h2>
+<p>Let us execute programs in different modes of programming.</p>
+<h3>Interactive Mode Programming</h3>
+<p>Invoking the interpreter without passing a script file as a parameter brings up the following prompt −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">$ python
+</span><span class="typ">Python</span><span class="pln"> </span><span class="lit">2.4</span><span class="pun">.</span><span class="lit">3</span><span class="pln"> </span><span class="pun">(#</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Nov</span><span class="pln"> </span><span class="lit">11</span><span class="pln"> </span><span class="lit">2010</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13</span><span class="pun">:</span><span class="lit">34</span><span class="pun">:</span><span class="lit">43</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">[</span><span class="pln">GCC </span><span class="lit">4.1</span><span class="pun">.</span><span class="lit">2</span><span class="pln"> </span><span class="lit">20080704</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Red</span><span class="pln"> </span><span class="typ">Hat</span><span class="pln"> </span><span class="lit">4.1</span><span class="pun">.</span><span class="lit">2</span><span class="pun">-</span><span class="lit">48</span><span class="pun">)]</span><span class="pln"> on linux2
+</span><span class="typ">Type</span><span class="pln"> </span><span class="str">"help"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"copyright"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"credits"</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="str">"license"</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> more information</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">&gt;&gt;&gt;</span></pre>
+<p>Type the following text at the Python prompt and press the Enter:</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Hello, Python!"</span></pre>
+<p>If you are running new version of Python, then you would need to use print statement with parenthesis as in <b>print ("Hello, Python!");</b>. However in Python version 2.4.3, this produces the following result:</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Python</span><span class="pun">!</span></pre>
+<h3>Script Mode Programming</h3>
+<p>Invoking the interpreter with a script parameter begins execution of 
+the script and continues until the script is finished. When the script 
+is finished, the interpreter is no longer active.</p>
+<p>Let us write a simple Python program in a script. Python files have extension <b>.py</b>. Type the following source code in a test.py file:</p>
+<pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span class="kwd">print</span><span class="pln"> </span><span class="str">"Hello, Python!"</span></pre>
+<p>We assume that you have Python interpreter set in PATH variable. Now, try to run this program as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">$ python test</span><span class="pun">.</span><span class="pln">py</span></pre>
+<p>This produces the following result:</p>
+<pre class="result notanslate">Hello, Python!
+</pre>
+<p>Let us try another way to execute a Python script. Here is the modified test.py file −</p>
+<pre class="prettyprint notranslate tryit prettyprinted" style=""><span class="com">#!/usr/bin/python</span><span class="pln">
+
+</span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Hello, Python!"</span></pre>
+<p>We assume that you have Python interpreter available in /usr/bin directory. Now, try to run this program as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">$ chmod </span><span class="pun">+</span><span class="pln">x test</span><span class="pun">.</span><span class="pln">py     </span><span class="com"># This is to make file executable</span><span class="pln">
+$</span><span class="pun">./</span><span class="pln">test</span><span class="pun">.</span><span class="pln">py</span></pre>
+<p>This produces the following result −</p>
+<pre class="result">Hello, Python!
+</pre>
+<h2>Python Identifiers</h2>
+<p>A Python identifier is a name used to identify a variable, function, 
+class, module or other object. An identifier starts with a letter A to Z
+ or a to z or an underscore (_) followed by zero or more letters, 
+underscores and digits (0 to 9).</p>
+<p>Python does not allow punctuation characters such as @, $, and % 
+within identifiers. Python is a case sensitive programming language. 
+Thus, <b>Manpower</b> and <b>manpower</b> are two different identifiers in Python.</p>
+<p>Here are naming conventions for Python identifiers −</p><p>
+</p><ul class="list">
+<li><p>Class names start with an uppercase letter. All other identifiers start with a lowercase letter.</p></li>
+<li><p>Starting an identifier with a single leading underscore indicates that the identifier is private.</p></li>
+<li><p>Starting an identifier with two leading underscores indicates a strongly private identifier.</p></li>
+<li><p>If the identifier also ends with two trailing underscores, the identifier is a language-defined special name.</p></li>
+</ul>
+<h2>Reserved Words</h2>
+<p>The following list shows the Python keywords. These are reserved 
+words and you cannot use them as constant or variable or any other 
+identifier names. All the Python keywords contain lowercase letters 
+only.</p>
+<table class="table table-bordered">
+<tbody><tr><td>and</td><td>exec</td><td>not</td></tr>
+<tr><td>assert</td><td>finally</td><td>or</td></tr>
+<tr><td>break</td><td>for</td><td>pass</td></tr>
+<tr><td>class</td><td>from</td><td>print</td></tr>
+<tr><td>continue</td><td>global</td><td>raise</td></tr>
+<tr><td>def</td><td>if</td><td>return</td></tr>
+<tr><td>del</td><td>import</td><td>try</td></tr>
+<tr><td>elif</td><td>in</td><td>while</td></tr>
+<tr><td>else</td><td>is</td><td>with </td></tr>
+<tr><td>except</td><td>lambda</td><td>yield</td></tr>
+</tbody></table>
+<h2>Lines and Indentation</h2>
+<p>Python provides no braces to indicate blocks of code for class and 
+function definitions or flow control. Blocks of code are denoted by line
+ indentation, which is rigidly enforced.</p>
+<p>The number of spaces in the indentation is variable, but all 
+statements within the block must be indented the same amount. For 
+example −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">if</span><span class="pln"> </span><span class="kwd">True</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"True"</span><span class="pln">
+</span><span class="kwd">else</span><span class="pun">:</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"False"</span></pre>
+<p>However, the following block generates an error −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">if</span><span class="pln"> </span><span class="kwd">True</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Answer"</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"True"</span><span class="pln">
+</span><span class="kwd">else</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Answer"</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"False"</span></pre>
+<p>Thus, in Python all the continuous lines indented with same number of
+ spaces would form a block. The following example has various statement 
+blocks −</p>
+<p><b>Note:</b> Do not try to understand the logic at this point of 
+time. Just make sure you understood various blocks even if they are 
+without braces.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com">#!/usr/bin/python</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> sys
+
+</span><span class="kwd">try</span><span class="pun">:</span><span class="pln">
+  </span><span class="com"># open file stream</span><span class="pln">
+  file </span><span class="pun">=</span><span class="pln"> open</span><span class="pun">(</span><span class="pln">file_name</span><span class="pun">,</span><span class="pln"> </span><span class="str">"w"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">except</span><span class="pln"> </span><span class="typ">IOError</span><span class="pun">:</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"There was an error writing to"</span><span class="pun">,</span><span class="pln"> file_name
+  sys</span><span class="pun">.</span><span class="kwd">exit</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Enter '"</span><span class="pun">,</span><span class="pln"> file_finish</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">print</span><span class="pln"> </span><span class="str">"' When finished"</span><span class="pln">
+</span><span class="kwd">while</span><span class="pln"> file_text </span><span class="pun">!=</span><span class="pln"> file_finish</span><span class="pun">:</span><span class="pln">
+  file_text </span><span class="pun">=</span><span class="pln"> raw_input</span><span class="pun">(</span><span class="str">"Enter text: "</span><span class="pun">)</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> file_text </span><span class="pun">==</span><span class="pln"> file_finish</span><span class="pun">:</span><span class="pln">
+    </span><span class="com"># close the file</span><span class="pln">
+    file</span><span class="pun">.</span><span class="pln">close
+    </span><span class="kwd">break</span><span class="pln">
+  file</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">file_text</span><span class="pun">)</span><span class="pln">
+  file</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">)</span><span class="pln">
+file</span><span class="pun">.</span><span class="pln">close</span><span class="pun">()</span><span class="pln">
+file_name </span><span class="pun">=</span><span class="pln"> raw_input</span><span class="pun">(</span><span class="str">"Enter filename: "</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> len</span><span class="pun">(</span><span class="pln">file_name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">:</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Next time please enter something"</span><span class="pln">
+  sys</span><span class="pun">.</span><span class="kwd">exit</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">try</span><span class="pun">:</span><span class="pln">
+  file </span><span class="pun">=</span><span class="pln"> open</span><span class="pun">(</span><span class="pln">file_name</span><span class="pun">,</span><span class="pln"> </span><span class="str">"r"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">except</span><span class="pln"> </span><span class="typ">IOError</span><span class="pun">:</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pln"> </span><span class="str">"There was an error reading file"</span><span class="pln">
+  sys</span><span class="pun">.</span><span class="kwd">exit</span><span class="pun">()</span><span class="pln">
+file_text </span><span class="pun">=</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">read</span><span class="pun">()</span><span class="pln">
+file</span><span class="pun">.</span><span class="pln">close</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">print</span><span class="pln"> file_text</span></pre>
+<h2>Multi-Line Statements</h2>
+<p>Statements in Python typically end with a new line. Python does, 
+however, allow the use of the line continuation character (\) to denote 
+that the line should continue. For example −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">total </span><span class="pun">=</span><span class="pln"> item_one </span><span class="pun">+</span><span class="pln"> \
+        item_two </span><span class="pun">+</span><span class="pln"> \
+        item_three</span></pre>
+<p>Statements contained within the [], {}, or () brackets do not need to use the line continuation character. For example −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">days </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'Monday'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Tuesday'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Wednesday'</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'Thursday'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Friday'</span><span class="pun">]</span></pre>
+<h2>Quotation in Python</h2>
+<p>Python accepts single ('), double (") and triple (''' or """) quotes 
+to denote string literals, as long as the same type of quote starts and 
+ends the string.</p>
+<p>The triple quotes are used to span the string across multiple lines. For example, all the following are legal −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">word </span><span class="pun">=</span><span class="pln"> </span><span class="str">'word'</span><span class="pln">
+sentence </span><span class="pun">=</span><span class="pln"> </span><span class="str">"This is a sentence."</span><span class="pln">
+paragraph </span><span class="pun">=</span><span class="pln"> </span><span class="str">"""This is a paragraph. It is
+made up of multiple lines and sentences."""</span></pre>
+<h2>Comments in Python</h2>
+<p>A hash sign (#) that is not inside a string literal begins a comment.
+ All characters after the # and up to the end of the physical line are 
+part of the comment and the Python interpreter ignores them.</p>
+<pre class="prettyprint notranslate tryit prettyprinted" style=""><span class="com">#!/usr/bin/python</span><span class="pln">
+
+</span><span class="com"># First comment</span><span class="pln">
+</span><span class="kwd">print</span><span class="pln"> </span><span class="str">"Hello, Python!"</span><span class="pln"> </span><span class="com"># second comment</span></pre>
+<p>This produces the following result −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Python</span><span class="pun">!</span></pre>
+<p>You can type a comment on the same line after a statement or expression −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Madisetti"</span><span class="pln"> </span><span class="com"># This is again comment</span></pre>
+<p>You can comment multiple lines as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com"># This is a comment.</span><span class="pln">
+</span><span class="com"># This is a comment, too.</span><span class="pln">
+</span><span class="com"># This is a comment, too.</span><span class="pln">
+</span><span class="com"># I said that already.</span></pre>
+<h2>Using Blank Lines</h2>
+<p>A line containing only whitespace, possibly with a comment, is known as a blank line and Python totally ignores it.</p>
+<p>In an interactive interpreter session, you must enter an empty physical line to terminate a multiline statement.</p>
+<h2>Waiting for the User</h2>
+<p>The following line of the program displays the prompt, the statement 
+saying “Press the enter key to exit”, and waits for the user to take 
+action −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com">#!/usr/bin/python</span><span class="pln">
+
+raw_input</span><span class="pun">(</span><span class="str">"\n\nPress the enter key to exit."</span><span class="pun">)</span></pre>
+<p>Here, "\n\n" is used to create two new lines before displaying the 
+actual line. Once the user presses the key, the program ends. This is a 
+nice trick to keep a console window open until the user is done with an 
+application.</p>
+<h2>Multiple Statements on a Single Line</h2>
+<p>The semicolon ( ; ) allows multiple statements on the single line 
+given that neither statement starts a new code block. Here is a sample 
+snip using the semicolon −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">import</span><span class="pln"> sys</span><span class="pun">;</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="str">'foo'</span><span class="pun">;</span><span class="pln"> sys</span><span class="pun">.</span><span class="pln">stdout</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">x </span><span class="pun">+</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">)</span></pre>
+<h2>Multiple Statement Groups as Suites</h2>
+<p>A group of individual statements, which make a single code block are called <b>suites</b> in Python. Compound or complex statements, such as if, while, def, and class require a header line and a suite.</p>
+<p>Header lines begin the statement (with the keyword) and terminate 
+with a colon ( : ) and are followed by one or more lines which make up 
+the suite. For example −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">if</span><span class="pln"> expression </span><span class="pun">:</span><span class="pln"> 
+   suite
+</span><span class="kwd">elif</span><span class="pln"> expression </span><span class="pun">:</span><span class="pln"> 
+   suite 
+</span><span class="kwd">else</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> 
+   suite</span></pre>
+<h2>Command Line Arguments</h2>
+<p>Many programs can be run to provide you with some basic information 
+about how they should be run. Python enables you to do this with -h −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">$ python </span><span class="pun">-</span><span class="pln">h
+usage</span><span class="pun">:</span><span class="pln"> python </span><span class="pun">[</span><span class="pln">option</span><span class="pun">]</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">[-</span><span class="pln">c cmd </span><span class="pun">|</span><span class="pln"> </span><span class="pun">-</span><span class="pln">m mod </span><span class="pun">|</span><span class="pln"> file </span><span class="pun">|</span><span class="pln"> </span><span class="pun">-]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">arg</span><span class="pun">]</span><span class="pln"> </span><span class="pun">...</span><span class="pln">
+</span><span class="typ">Options</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> arguments </span><span class="pun">(</span><span class="kwd">and</span><span class="pln"> corresponding environment variables</span><span class="pun">):</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">c cmd </span><span class="pun">:</span><span class="pln"> program passed </span><span class="kwd">in</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">(</span><span class="pln">terminates option list</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">d     </span><span class="pun">:</span><span class="pln"> debug output </span><span class="kwd">from</span><span class="pln"> parser </span><span class="pun">(</span><span class="pln">also PYTHONDEBUG</span><span class="pun">=</span><span class="pln">x</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">E     </span><span class="pun">:</span><span class="pln"> ignore environment variables </span><span class="pun">(</span><span class="pln">such </span><span class="kwd">as</span><span class="pln"> PYTHONPATH</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">h     </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">print</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> help message </span><span class="kwd">and</span><span class="pln"> </span><span class="kwd">exit</span><span class="pln">
+
+</span><span class="pun">[</span><span class="pln"> etc</span><span class="pun">.</span><span class="pln"> </span><span class="pun">]</span></pre>
+<p>You can also program your script in such a way that it should accept various options. <a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm">Command Line Arguments</a> is an advanced topic and should be studied a bit later once you have gone through rest of the Python concepts.</p> 
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/python/python_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="https://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="pdf-btn">
+<a href="https://www.tutorialspoint.com/python/pdf/python_basic_syntax.pdf" title="Python Basic Syntax" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/python/python_variable_types.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/python/python_basic_syntax.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?url=' + 'http://www.tutorialspoint.com/python/python_basic_syntax.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/python/python_basic_syntax.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/python/python_basic_syntax.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/python/python_basic_syntax.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://reddit.com/submit?url=http://www.tutorialspoint.com/python/python_basic_syntax.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
+<img src="Python%20Basic%20Syntax_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="Python%20Basic%20Syntax_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="https://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2017. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}" type="text">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/custom-min.js"></script><a class="scroll-to-top" href="#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="Python%20Basic%20Syntax_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="Python%20Basic%20Syntax_files/jquery.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/python/try_python.php');
+   tryit.compile();
+</script><div id="source" style="display:none;"></div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Python Basic Syntax",
+    "name": "Python Basic Syntax",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.tutorialspoint.com/python/python_basic_syntax.htm"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.tutorialspoint.com/python/images/python-mini.jpg",
+        "width": 255,
+        "height": 194
+    },
+    "author": {
+        "@type": "Organization",
+        "name": "Tutorials Point",
+        "url": "https://www.tutorialspoint.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tutorialspoint.com/images/logo60.png",
+            "width": 210,
+            "height": 60
+        }
+    },
+    "datePublished": "August 15 2017 02:44:32.",
+    "dateModified": "August 15 2017 02:34:07.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tutorials Point",
+        "url": "https://www.tutorialspoint.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tutorialspoint.com/images/logo60.png",
+            "width": 210,
+            "height": 60
+        }
+    },
+    "description": "The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages...."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "name": "www.tutorialspoint.com",
+                "@id": "https://www.tutorialspoint.com"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "name": "Python",
+                "@id": "https://www.tutorialspoint.com/python"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "name": "Python - Basic Syntax"
+            }
+        }
+    ]
+}
+</script>
+
+
+
+<div class="autocomplete-suggestions "></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
